@@ -23,9 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="134dp"
-        android:layout_marginTop="223dp"
+        android:layout_marginTop="235dp"
         android:layout_marginEnd="65dp"
-        android:text="TextView"
+        android:text="Email"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/phonelbl"
         app:layout_constraintTop_toTopOf="parent" />
@@ -56,7 +58,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="37dp"
-        android:text="TextView"
+        android:text="Address"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernametxt" />
 
@@ -79,7 +83,9 @@
         android:layout_marginStart="134dp"
         android:layout_marginTop="39dp"
         android:layout_marginEnd="65dp"
-        android:text="TextView"
+        android:text="Age"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/usernamelbl"
         app:layout_constraintTop_toTopOf="parent" />
@@ -100,7 +106,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="36dp"
-        android:text="TextView"
+        android:text="Name"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,7 +118,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="37dp"
-        android:text="TextView"
+        android:text="Phone No"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addresstxt" />
+
+    <Button
+        android:id="@+id/approvedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/approvedd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rejectedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/rejectedd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

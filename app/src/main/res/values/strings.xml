@@ -77,4 +77,7 @@
     <string name="viewJob">View Job</string>
     <string name="logoUt">Logout</string>
     <string name="companyNamE">Company Name</string>
+    <string name="approvedd">Approve</string>
+    <string name="rejectedd">Reject</string>
+    <string name="UserNName">Username</string>
 </resources>

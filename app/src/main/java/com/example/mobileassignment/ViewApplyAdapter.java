@@ -12,10 +12,10 @@ import com.example.mobileassignment.models.cardViewApplication;
 
 import java.util.ArrayList;
 
-public class ViewApplyAdapter extends RecyclerView.Adapter<ViewApplyAdapter.ExampleViewHolder> {
+public class ViewApplyAdapter extends RecyclerView.Adapter<ViewApplyAdapter.ExampleViewHolder1> {
 
-    private ArrayList<cardViewApplication> data;
-    private ViewApplyAdapter.OnItemClickListener ltn;
+    private ArrayList<cardViewApplication> data1;
+    private OnItemClickListener ltn;
 
     public interface OnItemClickListener{
         void onItemClick(int position);
@@ -25,16 +25,18 @@ public class ViewApplyAdapter extends RecyclerView.Adapter<ViewApplyAdapter.Exam
         ltn = ltnr;
     }
 
-    class ExampleViewHolder extends RecyclerView.ViewHolder{
+    class ExampleViewHolder1 extends RecyclerView.ViewHolder{
         public TextView username;
         public TextView address;
         public TextView age;
+        public TextView status;
 
-        public ExampleViewHolder(View itemView, final ViewApplyAdapter.OnItemClickListener ltnr){
+        public ExampleViewHolder1(View itemView, final OnItemClickListener ltnr){
             super(itemView);
-            username = itemView.findViewById(R.id.username);
+            username = itemView.findViewById(R.id.usernname);
             address = itemView.findViewById(R.id.userAddress);
             age = itemView.findViewById(R.id.userAge);
+            status = itemView.findViewById(R.id.statusTxt);
 
             itemView.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v) {
@@ -48,28 +50,29 @@ public class ViewApplyAdapter extends RecyclerView.Adapter<ViewApplyAdapter.Exam
     }
 
     public ViewApplyAdapter(ArrayList<cardViewApplication> applyL){
-        data= applyL;
+        data1= applyL;
     }
 
     @NonNull
     @Override
-    public ExampleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ExampleViewHolder1 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_application_list, parent,false);
-        ExampleViewHolder evh = new ExampleViewHolder(v, ltn);
+        ExampleViewHolder1 evh = new ExampleViewHolder1(v, ltn);
         return evh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
-        cardViewApplication currentItem = data.get(position);
+    public void onBindViewHolder(@NonNull ExampleViewHolder1 holder, int position) {
+        cardViewApplication currentItem1 = data1.get(position);
 
-        holder.username.setText(currentItem.getUserName());
-        holder.address.setText(currentItem.getUserAddress());
-        holder.age.setText(currentItem.getUserAge());
+        holder.username.setText(currentItem1.getUserName());
+        holder.address.setText(currentItem1.getUserAddress());
+        holder.age.setText(currentItem1.getUserAge());
+        holder.status.setText(currentItem1.getStatus());
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return data1.size();
     }
 }

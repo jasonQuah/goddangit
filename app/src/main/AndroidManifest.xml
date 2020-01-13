@@ -27,7 +27,7 @@
         <activity android:name=".StaffHomePage"></activity>
         <activity android:name=".addJobActivity"></activity>
         <activity android:name=".ViewJobActivity"></activity>
-        <activity android:name=".ViewApplicationActivity"></activity>
+        <activity android:name=".ViewApplicationActivity" />
         <activity android:name=".JobDetailsActivity" />
         <activity android:name=".SignUpEducation" />
         <activity android:name=".SignUpExperience" />
